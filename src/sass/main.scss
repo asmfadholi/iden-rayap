@@ -1,0 +1,33 @@
+@import 'init';
+
+// Global class styling
+
+.pointer {
+  cursor: pointer;
+}
+
+.float-to-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.float-to-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .5s, transform .5s;
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(-30px);
+}
