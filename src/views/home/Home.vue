@@ -15,16 +15,14 @@
             sm="8"
             md="6"
             lg="5">
-            <NumberCurrency @numberData="numberData"/>
-            <hr>
-            <Contents
-              :number-data="number_data"
-              :current-data="current_data"
-              @removeCurrency="removeCurrency"/>
-            <hr>
-            <AddCurrency
-              :currency-data="currency_data"
-              @submitCurrency="submitCurrency"/>
+            <classificationv1
+              ref="classification1"
+              @result="resultData"/>
+            <br>
+            <b-button @click="checkData">Submit</b-button>
+            <br>
+            <br>
+            Spesies: {{ result }}
           </b-col>
 
           <b-col />
@@ -37,87 +35,31 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import Contents from './Contents';
-import AddCurrency from './AddCurrency';
-import NumberCurrency from './NumberCurrency';
+import classificationv1 from './Classification1';
 
 export default {
   name: 'Home',
   components: {
-    Contents,
-    AddCurrency,
-    NumberCurrency,
+    classificationv1,
   },
 
   data() {
     return {
-      init: false,
-      number_data: 10,
-      currency_data: [],
-      current_data: [],
+      result: null,
     };
   },
 
-  computed: {
-    ...mapGetters('StoreCurrency', ['currency_options']),
-  },
-
   watch: {
-    currency_options(newVal) {
-      if (newVal.length === this.currency_data.length || this.init === false) {
-        this.currency_data = [...newVal];
-        this.init = true;
-      } else {
-        this.renewData(newVal, this.currency_data);
-        this.renewData(newVal, this.current_data);
-      }
-      this.current_data.forEach((current, index) => {
-        const filterCurrency =
-          this.currency_data.filter(currency => currency.currency === current.currency);
-        if (filterCurrency.length > 0) {
-          this.current_data.splice(index, 1, filterCurrency[0]);
-        }
-      });
-    },
-  },
-
-  created() {
-    this.$store.dispatch('StoreCurrency/getCurrencyList');
   },
 
   methods: {
-    findIdAndRemove(id) {
-      this.currency_data.forEach((data, index) => {
-        if (data.id === id) {
-          this.currency_data.splice(index, 1);
-        }
-      });
+    resultData(data) {
+      this.result = data;
     },
 
-    submitCurrency(value) {
-      this.findIdAndRemove(value.id);
-      this.current_data.push(value);
+    checkData() {
+      this.$refs.classification1.checkResult();
     },
-
-    removeCurrency(currency, index) {
-      this.current_data.splice(index, 1);
-      this.currency_data.push(currency);
-    },
-
-    numberData(number) {
-      this.number_data = number;
-    },
-
-    renewData(newVal, oldVal) {
-      oldVal.forEach((current, index) => {
-        const filterCurrency = newVal.filter(currency => currency.currency === current.currency);
-        if (filterCurrency.length > 0) {
-          oldVal.splice(index, 1, filterCurrency[0]);
-        }
-      });
-    },
-
   },
 };
 </script>
