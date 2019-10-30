@@ -12,9 +12,7 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src",
     "lintsass": "sass-lint -v",
-    "lintsass:fix": "sass-lint-auto-fix",
-    "build": "node build/build.js",
-    "postinstall": "npm run build"
+    "lintsass:fix": "sass-lint-auto-fix"
   },
   "dependencies": {
     "axios": "^0.18.0",
