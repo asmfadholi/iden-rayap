@@ -1,7 +1,9 @@
 <template>
   <div class="Home">
     <div>
-
+      <b-button
+        variant="danger"
+        @click="resetData">Reset</b-button>
       <b-container
         class="container-card"
         fluid>
@@ -19,7 +21,9 @@
               ref="classification1"
               @result="resultData"/>
             <br>
-            <b-button @click="checkData">Submit</b-button>
+            <b-button
+              variant="success"
+              @click="checkData">Submit</b-button>
             <br>
             <br>
             Spesies: {{ result }}
@@ -55,6 +59,11 @@ export default {
   methods: {
     resultData(data) {
       this.result = data;
+    },
+
+    resetData() {
+      this.$refs.classification1.reset();
+      this.result = null;
     },
 
     checkData() {

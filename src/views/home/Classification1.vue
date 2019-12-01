@@ -228,8 +228,6 @@ export default {
         articles_length3: null,
         labrum_dimension: null,
         labrums_tip_shape: null,
-
-
       },
 
       opsi_step2: null,
@@ -530,6 +528,36 @@ export default {
     // },
   },
   methods: {
+    reset() {
+      this.class1 = {
+        mandible_tooth: null,
+
+        article_antenna: null,
+        article_length: null,
+        labrum: null,
+
+        head_shape: null,
+        mandible_hookness: null,
+        concavity: null,
+
+        denticle: null,
+
+        // step 3
+        antena_article3: null,
+        antena_length3: null,
+        labrum_shape3: null,
+
+        mandible_hookness3: null,
+        incurved_tips3: null,
+
+        head_hair3: null,
+        antenna_articles3: null,
+        head_length_with_mandible3: null,
+        articles_length3: null,
+        labrum_dimension: null,
+        labrums_tip_shape: null,
+      };
+    },
     checkStep2() {
       let opsi1 = 0;
       if (this.class1.concavity === 'deep') {
