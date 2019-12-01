@@ -12,6 +12,7 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src",
     "lintsass": "sass-lint -v",
+    "build": "node build/build.js",
     "lintsass:fix": "sass-lint-auto-fix"
   },
   "dependencies": {
@@ -96,7 +97,7 @@
     "webpack-merge": "^4.1.0"
   },
   "engines": {
-    "node": "10.4.1",
+    "node": "10.13.0",
     "npm": "6.4.1"
   },
   "browserslist": [
