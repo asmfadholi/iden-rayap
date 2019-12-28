@@ -51,12 +51,6 @@
             v-model="class1.head_shape"
             :options="options_head_shape"
           />
-          <!-- <vue-multiselect
-            v-model="class1.head_shape"
-            :options="options_head_shape"
-            placeholder="Select one"
-            label="label"
-            track-by="label" /> -->
         </b-col>
 
         <b-col>

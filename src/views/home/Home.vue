@@ -14,10 +14,13 @@
           <b-col
             class="content-currency"
             cols="12"
-            sm="8"
-            md="6"
-            lg="5">
-            <classificationv1
+            sm="12"
+            md="8"
+            lg="8">
+            <!-- <classificationv1
+              ref="classification1"
+              @result="resultData"/> -->
+            <classificationOne
               ref="classification1"
               @result="resultData"/>
             <br>
@@ -40,11 +43,13 @@
 
 <script>
 import classificationv1 from './Classification1';
+import classificationOne from './classification-1/Classification1';
 
 export default {
   name: 'Home',
   components: {
     classificationv1,
+    classificationOne,
   },
 
   data() {
