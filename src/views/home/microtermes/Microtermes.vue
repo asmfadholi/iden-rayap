@@ -37,6 +37,10 @@
       variant="success"
       @click="checkResult">Check
     </b-button>
+    <b-button
+      variant="danger"
+      @click="resetData">Reset
+    </b-button>
     <br>
     <br>
     Result: <i>{{ result }}</i>
@@ -68,6 +72,12 @@ export default {
 
 
   methods: {
+    resetData() {
+      for (let i = 1; i <= 4; i += 1) {
+        this[`phase_${i}`] = null;
+      }
+      this.result = null;
+    },
     phase(newVal, number) {
       this[`phase_${number}`] = newVal;
     },
