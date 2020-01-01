@@ -2,6 +2,7 @@
   <b-container>
     <h3> Microtermes </h3>
     <div>
+
       <phaseOne @phaseOne="phase($event, 1)">
         <div :slot="phase_1">
           <phaseTwo
@@ -9,12 +10,14 @@
             class="m__l--25"
             @phaseTwo="phase($event, 2)">
             <div :slot="phase_2">
+
               <phaseThree
                 :data="phase_2"
                 class="m__l--25"
                 @phaseThree="phase($event, 3)">
 
                 <div :slot="phase_3">
+
                   <phaseFour
                     :data="phase_3"
                     class="m__l--25"
@@ -22,6 +25,7 @@
                 </div>
 
               </phaseThree>
+
             </div>
           </phaseTwo>
         </div>
@@ -35,7 +39,7 @@
     </b-button>
     <br>
     <br>
-    Result: {{ result }}
+    Result: <i>{{ result }}</i>
   </b-container>
 </template>
 

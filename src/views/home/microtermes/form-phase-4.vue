@@ -1,12 +1,20 @@
 <template>
   <div>
+
     <div v-if="data === '3'">
+      <hr>
       <b-form-group label="The Pronotum's anterior shape">
         <b-form-radio
           v-model="selected"
           name="some-radios"
           value="1"
-          @change="change">Incised
+          @change="change">
+          <b-img
+            :height="150"
+            :src="require('@/assets/Microtermes/mic_006.png')"
+            alt="Fluid image"/>
+          <br>
+          Incised
         </b-form-radio>
         <br>
         <br>
@@ -16,7 +24,13 @@
           v-model="selected"
           name="some-radios"
           value="2"
-          @change="change">Notched
+          @change="change">
+          <b-img
+            :height="150"
+            :src="require('@/assets/Microtermes/mic_007.png')"
+            alt="Fluid image"/>
+          <br>
+          Notched
         </b-form-radio>
 
         <br>
@@ -25,7 +39,9 @@
         <br>
 
       </b-form-group>
+      <hr>
     </div>
+
   </div>
 </template>
 

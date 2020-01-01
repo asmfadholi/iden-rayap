@@ -1,5 +1,6 @@
 <template>
   <div>
+    <hr>
     <b-row>
       <b-col>
         <b-form-group label="Defining tooth near the tip of the left Mandible">
@@ -27,6 +28,7 @@
         </b-form-group>
       </b-col>
     </b-row>
+    <hr>
   </div>
 </template>
 

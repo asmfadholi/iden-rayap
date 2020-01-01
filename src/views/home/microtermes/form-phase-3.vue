@@ -1,12 +1,20 @@
 <template>
   <div>
+
     <div v-if="data === '2'">
+      <hr>
       <b-form-group label="The labrum's shape ">
         <b-form-radio
           v-model="selected"
           name="some-radios"
           value="1"
-          @change="change">Tongue
+          @change="change">
+          <b-img
+            :height="150"
+            :src="require('@/assets/Microtermes/mic_003.png')"
+            alt="Fluid image"/>
+          <br>
+          Tongue
         </b-form-radio>
         <br>
         <br>
@@ -16,7 +24,13 @@
           v-model="selected"
           name="some-radios"
           value="2"
-          @change="change">Lancet
+          @change="change">
+          <b-img
+            :height="150"
+            :src="require('@/assets/Microtermes/mic_004.png')"
+            alt="Fluid image"/>
+          <br>
+          Lancet
         </b-form-radio>
 
         <br>
@@ -28,7 +42,13 @@
           v-model="selected"
           name="some-radios"
           value="3"
-          @change="change">Longer and narrow tongue
+          @change="change">
+          <b-img
+            :height="150"
+            :src="require('@/assets/Microtermes/mic_005.png')"
+            alt="Fluid image"/>
+          <br>
+          Longer and narrow tongue
 
 
         </b-form-radio>
@@ -38,7 +58,9 @@
         <slot name="3"/>
         <br>
       </b-form-group>
+      <hr>
     </div>
+
   </div>
 </template>
 
