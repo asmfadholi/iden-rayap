@@ -9,34 +9,36 @@
           name="some-radios"
           value="1"
           @change="change">
+          Incised
+          <br>
           <b-img
             :height="150"
             :src="require('@/assets/Microtermes/mic_006.png')"
             alt="Fluid image"/>
-          <br>
-          Incised
         </b-form-radio>
         <br>
         <br>
         <slot name="1"/>
         <br>
+        <hr>
         <b-form-radio
           v-model="selected"
           name="some-radios"
           value="2"
           @change="change">
+          Notched
+          <br>
           <b-img
             :height="150"
             :src="require('@/assets/Microtermes/mic_007.png')"
             alt="Fluid image"/>
-          <br>
-          Notched
         </b-form-radio>
 
         <br>
         <br>
         <slot name="2"/>
         <br>
+
 
       </b-form-group>
       <hr>

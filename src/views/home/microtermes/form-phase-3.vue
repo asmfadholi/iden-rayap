@@ -9,46 +9,49 @@
           name="some-radios"
           value="1"
           @change="change">
+          Tongue
+          <br>
           <b-img
             :height="150"
             :src="require('@/assets/Microtermes/mic_003.png')"
             alt="Fluid image"/>
-          <br>
-          Tongue
         </b-form-radio>
         <br>
         <br>
         <slot name="1"/>
         <br>
+        <hr>
         <b-form-radio
           v-model="selected"
           name="some-radios"
           value="2"
           @change="change">
+          Lancet
+          <br>
           <b-img
             :height="150"
             :src="require('@/assets/Microtermes/mic_004.png')"
             alt="Fluid image"/>
-          <br>
-          Lancet
+
         </b-form-radio>
 
         <br>
         <br>
         <slot name="2"/>
         <br>
-
+        <hr>
         <b-form-radio
           v-model="selected"
           name="some-radios"
           value="3"
           @change="change">
+
+          Longer and narrow tongue
+          <br>
           <b-img
             :height="150"
             :src="require('@/assets/Microtermes/mic_005.png')"
             alt="Fluid image"/>
-          <br>
-          Longer and narrow tongue
 
 
         </b-form-radio>
@@ -57,6 +60,7 @@
         <br>
         <slot name="3"/>
         <br>
+
       </b-form-group>
       <hr>
     </div>

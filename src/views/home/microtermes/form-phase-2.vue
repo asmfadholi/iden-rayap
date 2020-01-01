@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <div v-if="data === '2'">
+    <div>
       <hr>
       <b-form-group label="The head's and left mandible shape">
         <b-form-radio
@@ -9,28 +9,31 @@
           name="some-radios"
           value="1"
           @change="change">
+          Almost round with rectangular base (P=L=Diag) + S-invS form mandible
+          <br>
           <b-img
             :height="150"
             :src="require('@/assets/Microtermes/mic_001.png')"
             alt="Fluid image"/>
-          <br>
-          Almost round with rectangular base (P=L=Diag) + S-invS form mandible
         </b-form-radio>
         <br>
         <br>
         <slot name="1"/>
         <br>
+        <hr>
         <b-form-radio
           v-model="selected"
           name="some-radios"
           value="2"
           @change="change">
+
+          Tear drop with rounded side in the posterior + /-\ form Mandible
+          <br>
           <b-img
             :height="150"
             :src="require('@/assets/Microtermes/mic_002.png')"
             alt="Fluid image"/>
-          <br>
-          Tear drop with rounded side in the posterior + /-\ form Mandible
+
         </b-form-radio>
 
         <br>

@@ -3,33 +3,33 @@
     <h3> Microtermes </h3>
     <div>
 
-      <phaseOne @phaseOne="phase($event, 1)">
-        <div :slot="phase_1">
-          <phaseTwo
-            :data="phase_1"
+      <!-- <phaseOne @phaseOne="phase($event, 1)">
+        <div :slot="phase_1"> -->
+      <phaseTwo
+        :data="phase_1"
+        class="m__l--25"
+        @phaseTwo="phase($event, 2)">
+        <div :slot="phase_2">
+
+          <phaseThree
+            :data="phase_2"
             class="m__l--25"
-            @phaseTwo="phase($event, 2)">
-            <div :slot="phase_2">
+            @phaseThree="phase($event, 3)">
 
-              <phaseThree
-                :data="phase_2"
+            <div :slot="phase_3">
+
+              <phaseFour
+                :data="phase_3"
                 class="m__l--25"
-                @phaseThree="phase($event, 3)">
-
-                <div :slot="phase_3">
-
-                  <phaseFour
-                    :data="phase_3"
-                    class="m__l--25"
-                    @phaseFour="phase($event, 4)"/>
-                </div>
-
-              </phaseThree>
-
+                @phaseFour="phase($event, 4)"/>
             </div>
-          </phaseTwo>
+
+          </phaseThree>
+
         </div>
-      </phaseOne>
+      </phaseTwo>
+      <!-- </div>
+      </phaseOne> -->
 
     </div>
     <br>

@@ -3,30 +3,26 @@ $grey: #808080;
 $blue: #00bfff;
 $red: #dc3545;
 $white: #fff;
-
-
-
 $size: 0;
-@while $size <= 200 {
-  .m--#{$size} {
-    margin: #{$size}px !important;
-  }
-  .m__l--#{$size} {
-    margin-left: #{$size}px !important;
-  }
-  .m__r--#{$size} {
-    margin-right: #{$size}px !important;
-  }
-  .m__t--#{$size} {
-    margin-top: #{$size}px !important;
-  }
-  .m__b--#{$size} {
-    margin-bottom: #{$size}px !important;
-  }
-  $size: $size + 1;
+@while $size <=200 {
+    .m--#{$size} {
+        margin: #{$size}px !important;
+    }
+    .m__l--#{$size} {
+        margin-left: #{$size}px !important;
+    }
+    .m__r--#{$size} {
+        margin-right: #{$size}px !important;
+    }
+    .m__t--#{$size} {
+        margin-top: #{$size}px !important;
+    }
+    .m__b--#{$size} {
+        margin-bottom: #{$size}px !important;
+    }
+    $size: $size+1;
 }
 
 .m--auto {
-  margin: auto !important;
+    margin: auto !important;
 }
-
