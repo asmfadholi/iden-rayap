@@ -15,6 +15,8 @@
             :height="150"
             :src="require('@/assets/Microtermes/mic_003.png')"
             alt="Fluid image"/>
+          <br>
+          (Rathore and Bhattacharyya, 2004)
         </b-form-radio>
         <br>
         <br>
@@ -32,7 +34,8 @@
             :height="150"
             :src="require('@/assets/Microtermes/mic_004.png')"
             alt="Fluid image"/>
-
+          <br>
+          (Rathore and Bhattacharyya, 2004)
         </b-form-radio>
 
         <br>
@@ -52,6 +55,8 @@
             :height="150"
             :src="require('@/assets/Microtermes/mic_005.png')"
             alt="Fluid image"/>
+          <br>
+          (Ahmad, 1965; Rathore and Bhattacharyya, 2004)
 
 
         </b-form-radio>

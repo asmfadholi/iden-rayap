@@ -9,12 +9,14 @@
           name="some-radios"
           value="1"
           @change="change">
-          Almost round with rectangular base (P=L=Diag) + S-invS form mandible
+          Almost round with rectangular base (Length = Width = Diagonal) + mandible with a moon crescent form
           <br>
           <b-img
             :height="150"
             :src="require('@/assets/Microtermes/mic_001.png')"
             alt="Fluid image"/>
+          <br>
+          (Ahmad, 1965)
         </b-form-radio>
         <br>
         <br>
@@ -27,13 +29,15 @@
           value="2"
           @change="change">
 
-          Tear drop with rounded side in the posterior + /-\ form Mandible
+          Tear drop with rounded side in the posterior + mandible with almost straight form
+
           <br>
           <b-img
             :height="150"
             :src="require('@/assets/Microtermes/mic_002.png')"
             alt="Fluid image"/>
-
+          <br>
+          (Ahmad, 1965; Maiti, 1983)
         </b-form-radio>
 
         <br>
