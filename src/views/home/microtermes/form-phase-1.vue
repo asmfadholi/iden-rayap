@@ -8,7 +8,7 @@
             v-model="selected"
             name="some-radios"
             value="1"
-            @change="change">Presence
+            @change="change">Present
           </b-form-radio>
           <br>
           <br>
@@ -18,7 +18,7 @@
             v-model="selected"
             name="some-radios"
             value="2"
-            @change="change">Not Presence, only denticle
+            @change="change">Not Present, only denticle
           </b-form-radio>
 
           <br>
