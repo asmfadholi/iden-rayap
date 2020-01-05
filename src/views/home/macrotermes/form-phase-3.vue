@@ -49,7 +49,7 @@
           value="3"
           @change="change">
 
-          Longer tongue, sometimes with elongated bulb-like shape
+          Longer and narrow tongue
           <br>
           <b-img
             :height="150"

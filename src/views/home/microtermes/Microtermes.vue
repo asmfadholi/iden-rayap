@@ -1,65 +1,88 @@
 <template>
-  <b-container>
-    <h3> Microtermes </h3>
-    <div>
+  <div>
 
-      <!-- <phaseOne @phaseOne="phase($event, 1)">
+    <b-container>
+      <div class="title">
+        <b-row>
+          <b-col>
+            <h3> Microtermes </h3>
+          </b-col>
+          <b-col>
+            <b-button
+              variant="success"
+              @click="checkResult">Check
+            </b-button>
+            <b-button
+              variant="danger"
+              @click="resetData">Reset
+            </b-button>
+            <br>
+            <br>
+            Result: <i>{{ result }}</i>
+          </b-col>
+        </b-row>
+      </div>
+
+      <div class="p__t--120">
+
+        <!-- <phaseOne @phaseOne="phase($event, 1)">
         <div :slot="phase_1"> -->
-      <phaseTwo
-        :data="phase_1"
-        class="m__l--25"
-        @phaseTwo="phase($event, 2)">
-        <div :slot="phase_2">
+        <phaseTwo
+          :data="phase_1"
+          class="m__l--25"
+          @phaseTwo="phase($event, 2)">
+          <div :slot="phase_2">
 
-          <phaseThree
-            :data="phase_2"
-            class="m__l--25"
-            @phaseThree="phase($event, 3)">
+            <phaseThree
+              :data="phase_2"
+              class="m__l--25"
+              @phaseThree="phase($event, 3)">
 
-            <div :slot="phase_3">
+              <div :slot="phase_3">
 
-              <phaseFour
-                :data="phase_3"
-                class="m__l--25"
-                @phaseFour="phase($event, 4)"/>
-            </div>
+                <phaseFour
+                  :data="phase_3"
+                  class="m__l--25"
+                  @phaseFour="phase($event, 4)"/>
+              </div>
 
-          </phaseThree>
+            </phaseThree>
 
-        </div>
-      </phaseTwo>
+          </div>
+        </phaseTwo>
       <!-- </div>
       </phaseOne> -->
 
-    </div>
-    <br>
-    <b-button
-      variant="success"
-      @click="checkResult">Check
-    </b-button>
-    <b-button
-      variant="danger"
-      @click="resetData">Reset
-    </b-button>
-    <br>
-    <br>
-    Result: <i>{{ result }}</i>
-    <br>
-    <br>
-    <br>
-    <b>Reference</b>
-    <br>
-    <p>
-      Ahmad, M. (1965). Termites (Isoptera) of Thailand. Bulletin of the American Museum of Natural History (Vol. 131). New York: American Museum of Natural History.
-    </p>
-    <p>
-      Maiti, P. K. (1983). Termite fauna (Isoptera) of West Bengal , India, Their Recognition, Biology, and Ecology. (Z. S. of I. The Director, Ed.), Occasional Paper No 42. Calcutta: Zoological Survey of India.
-    </p>
-    <p>
-      Rathore, N. S., & Bhattacharyya, A. K. (2004). Termite (Insecta : Isoptera) Fauna of Gujarat and Rajasthan - Present State of Knowledge. (Z. S. of I. The Director, Ed.), Occasional Paper No 223. Calcutta: Zoological Survey of India.
-    </p>
+      </div>
+      <br>
+      <!-- <b-button
+        variant="success"
+        @click="checkResult">Check
+      </b-button>
+      <b-button
+        variant="danger"
+        @click="resetData">Reset
+      </b-button>
+      <br>
+      <br>
+      Result: <i>{{ result }}</i> -->
+      <br>
+      <br>
+      <br>
+      <b>Reference</b>
+      <br>
+      <p>
+        Ahmad, M. (1965). Termites (Isoptera) of Thailand. Bulletin of the American Museum of Natural History (Vol. 131). New York: American Museum of Natural History.
+      </p>
+      <p>
+        Maiti, P. K. (1983). Termite fauna (Isoptera) of West Bengal , India, Their Recognition, Biology, and Ecology. (Z. S. of I. The Director, Ed.), Occasional Paper No 42. Calcutta: Zoological Survey of India.
+      </p>
+      <p>
+        Rathore, N. S., & Bhattacharyya, A. K. (2004). Termite (Insecta : Isoptera) Fauna of Gujarat and Rajasthan - Present State of Knowledge. (Z. S. of I. The Director, Ed.), Occasional Paper No 223. Calcutta: Zoological Survey of India.
+      </p>
 
-  </b-container>
+    </b-container>
+  </div>
 </template>
 
 <script>
@@ -125,3 +148,15 @@ export default {
 
 };
 </script>
+
+<style lang="scss">
+  .title {
+    padding: 15px;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+    position: fixed;
+    z-index: 4;
+    height: auto;
+    width: 100%;
+    background: white;
+  }
+</style>

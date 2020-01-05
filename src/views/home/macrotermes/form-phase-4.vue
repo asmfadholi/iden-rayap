@@ -1,19 +1,19 @@
 <template>
   <div>
 
-    <div v-if="data === '2'">
+    <div v-if="data === '3'">
       <hr>
-      <b-form-group label="The labrum's shape ">
+      <b-form-group label="The Pronotum's anterior shape">
         <b-form-radio
           v-model="selected"
           name="some-radios"
           value="1"
           @change="change">
-          Tongue
+          Incised
           <br>
           <b-img
             :height="150"
-            :src="require('@/assets/Microtermes/mic_003.png')"
+            :src="require('@/assets/Microtermes/mic_006.png')"
             alt="Fluid image"/>
           <br>
           (Rathore and Bhattacharyya, 2004)
@@ -28,43 +28,21 @@
           name="some-radios"
           value="2"
           @change="change">
-          Lancet
+          Notched
           <br>
           <b-img
             :height="150"
-            :src="require('@/assets/Microtermes/mic_004.png')"
+            :src="require('@/assets/Microtermes/mic_007.png')"
             alt="Fluid image"/>
           <br>
-          (Rathore and Bhattacharyya, 2004)
+          (Ahmad, 1965)
         </b-form-radio>
 
         <br>
         <br>
         <slot name="2"/>
         <br>
-        <hr>
-        <b-form-radio
-          v-model="selected"
-          name="some-radios"
-          value="3"
-          @change="change">
 
-          Longer tongue, sometimes with elongated bulb-like shape
-          <br>
-          <b-img
-            :height="150"
-            :src="require('@/assets/Microtermes/mic_005.png')"
-            alt="Fluid image"/>
-          <br>
-          (Ahmad, 1965; Rathore and Bhattacharyya, 2004)
-
-
-        </b-form-radio>
-
-        <br>
-        <br>
-        <slot name="3"/>
-        <br>
 
       </b-form-group>
       <hr>
@@ -107,9 +85,9 @@ export default {
 
     isFinished(val) {
       if (val === '1' || val === '2') {
-        this.$emit('phaseThree', { value: this.selected, result: val === '1' ? 'Microtermes mycophagus' : 'Microtermes incertoides' });
+        this.$emit('phaseFour', { value: this.selected, result: val === '1' ? 'Microtermes unicolor' : 'Microtermes obesi' });
       } else {
-        this.$emit('phaseThree', this.selected);
+        this.$emit('phaseFour', this.selected);
       }
     },
   },

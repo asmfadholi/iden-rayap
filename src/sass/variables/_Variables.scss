@@ -23,6 +23,26 @@ $size: 0;
     $size: $size+1;
 }
 
+$size: 0;
+@while $size <=200 {
+    .p--#{$size} {
+        padding: #{$size}px !important;
+    }
+    .p__l--#{$size} {
+        padding-left: #{$size}px !important;
+    }
+    .p__r--#{$size} {
+        padding-right: #{$size}px !important;
+    }
+    .p__t--#{$size} {
+        padding-top: #{$size}px !important;
+    }
+    .p__b--#{$size} {
+        padding-bottom: #{$size}px !important;
+    }
+    $size: $size+1;
+}
+
 .m--auto {
     margin: auto !important;
 }
