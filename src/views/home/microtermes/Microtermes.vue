@@ -90,6 +90,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 import phaseOne from './form-phase-1';
 import phaseTwo from './form-phase-2';
 import phaseThree from './form-phase-3';
@@ -127,6 +128,22 @@ export default {
     };
   },
 
+  computed: {
+    ...mapState('StoreResult', ['result_state']),
+  },
+
+  watch: {
+    // eslint-disable-next-line
+    'result_state.check' () {
+      this.checkResult();
+    },
+
+    // eslint-disable-next-line
+    'result_state.reset' () {
+      this.resetData();
+    },
+  },
+
 
   methods: {
     resetData() {
@@ -156,12 +173,14 @@ export default {
               this[`phase_${i}`] = null;
             } else {
               this.result = this[`phase_${i}`].result;
+              this.$store.commit('StoreResult/setResult', this.result);
               return;
             }
           }
         }
       }
       this.result = 'not found';
+      this.$store.commit('StoreResult/setResult', this.result);
     },
   },
 
