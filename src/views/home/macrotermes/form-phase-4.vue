@@ -1,22 +1,23 @@
 <template>
   <div>
 
-    <div v-if="data === '3'">
+    <div v-if="data === '5'">
       <hr>
-      <b-form-group label="The Pronotum's anterior shape">
+      <b-form-group
+        label="Major soldier Head's length (mm)">
         <b-form-radio
           v-model="selected"
           name="some-radios"
           value="1"
           @change="change">
-          Incised
-          <br>
+          < 3.2
+          <!-- <br>
           <b-img
             :height="150"
-            :src="require('@/assets/Microtermes/mic_006.png')"
+            :src="require('@/assets/Macrotermes/mac_008.png')"
             alt="Fluid image"/>
-          <br>
-          (Rathore and Bhattacharyya, 2004)
+          <br> -->
+          <!-- (Rathore and Bhattacharyya, 2004) -->
         </b-form-radio>
         <br>
         <br>
@@ -28,14 +29,14 @@
           name="some-radios"
           value="2"
           @change="change">
-          Notched
-          <br>
+          >= 3.2
+          <!-- <br>
           <b-img
             :height="150"
-            :src="require('@/assets/Microtermes/mic_007.png')"
+            :src="require('@/assets/Macrotermes/mac_009.png')"
             alt="Fluid image"/>
-          <br>
-          (Ahmad, 1965)
+          <br> -->
+          <!-- (Ahmad, 1965) -->
         </b-form-radio>
 
         <br>
@@ -43,6 +44,33 @@
         <slot name="2"/>
         <br>
 
+
+      </b-form-group>
+      <hr>
+    </div>
+
+    <div v-if="data === '6'">
+      <hr>
+      <b-form-group
+        label="Major soldier Head's length (mm)">
+        <b-form-radio
+          v-model="selected"
+          name="some-radios"
+          value="3"
+          @change="change">
+          < 3.2
+          <!-- <br>
+          <b-img
+            :height="150"
+            :src="require('@/assets/Microtermes/mic_006.png')"
+            alt="Fluid image"/>
+          <br> -->
+          <!-- (Rathore and Bhattacharyya, 2004) -->
+        </b-form-radio>
+        <br>
+        <br>
+        <slot name="3"/>
+        <br>
 
       </b-form-group>
       <hr>
@@ -69,12 +97,12 @@ export default {
       if (newVal) {
         this.isFinished(newVal);
       } else {
-        this.$emit('phaseThree', null);
+        this.$emit('phaseFour', null);
       }
     },
     data(newVal) {
-      if (newVal === '1') {
-        this.$emit('phaseThree', null);
+      if (newVal === '1' || newVal === '2' || newVal === '3' || newVal === '4') {
+        this.$emit('phaseFour', null);
       }
     },
   },
@@ -85,7 +113,7 @@ export default {
 
     isFinished(val) {
       if (val === '1' || val === '2') {
-        this.$emit('phaseFour', { value: this.selected, result: val === '1' ? 'Microtermes unicolor' : 'Microtermes obesi' });
+        this.$emit('phaseFour', { value: this.selected, result: val === '1' ? 'azarelli' : 'barneyi' });
       } else {
         this.$emit('phaseFour', this.selected);
       }

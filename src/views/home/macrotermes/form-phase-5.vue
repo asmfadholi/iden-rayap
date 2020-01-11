@@ -1,22 +1,23 @@
 <template>
   <div>
 
-    <div>
+    <div v-if="data === '3'">
       <hr>
-      <b-form-group label="Hyaline Tip's shape">
+      <b-form-group
+        label="Antero-lateral lobe of pronotum's shape form ">
         <b-form-radio
           v-model="selected"
           name="some-radios"
           value="1"
           @change="change">
-          Elongated tip, pointed
+          very prominent with long setae
           <br>
           <b-img
             :height="150"
-            :src="require('@/assets/Macrotermes/mac_001.png')"
+            :src="require('@/assets/Macrotermes/mac_008.png')"
             alt="Fluid image"/>
           <br>
-          <!-- (Ahmad, 1965) -->
+          <!-- (Rathore and Bhattacharyya, 2004) -->
         </b-form-radio>
         <br>
         <br>
@@ -28,16 +29,14 @@
           name="some-radios"
           value="2"
           @change="change">
-
-          Short tip, tongue like - anteriorly rounded
-
+          not so prominent
           <br>
           <b-img
             :height="150"
-            :src="require('@/assets/Macrotermes/mac_002.png')"
+            :src="require('@/assets/Macrotermes/mac_009.png')"
             alt="Fluid image"/>
           <br>
-          <!-- (Ahmad, 1965; Maiti, 1983) -->
+          <!-- (Ahmad, 1965) -->
         </b-form-radio>
 
         <br>
@@ -45,27 +44,7 @@
         <slot name="2"/>
         <br>
 
-        <b-form-radio
-          v-model="selected"
-          name="some-radios"
-          value="3"
-          @change="change">
 
-          Short tip, trilobed pointy
-
-          <br>
-          <b-img
-            :height="150"
-            :src="require('@/assets/Macrotermes/mac_003.png')"
-            alt="Fluid image"/>
-          <br>
-          <!-- (Ahmad, 1965; Maiti, 1983) -->
-        </b-form-radio>
-
-        <br>
-        <br>
-        <slot name="3"/>
-        <br>
       </b-form-group>
       <hr>
     </div>
@@ -91,12 +70,12 @@ export default {
       if (newVal) {
         this.isFinished(newVal);
       } else {
-        this.$emit('phaseTwo', null);
+        this.$emit('phaseFive', null);
       }
     },
     data(newVal) {
-      if (newVal === '1') {
-        this.$emit('phaseTwo', null);
+      if (newVal === '1' || newVal === '2') {
+        this.$emit('phaseFive', null);
       }
     },
   },
@@ -105,8 +84,12 @@ export default {
       this.selected = newVal;
     },
 
-    isFinished() {
-      this.$emit('phaseTwo', this.selected);
+    isFinished(val) {
+      if (val === '1') {
+        this.$emit('phaseFive', { value: this.selected, result: 'ahmadi' });
+      } else {
+        this.$emit('phaseFive', this.selected);
+      }
     },
   },
 

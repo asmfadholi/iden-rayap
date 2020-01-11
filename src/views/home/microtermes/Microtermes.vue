@@ -2,10 +2,14 @@
   <div>
 
     <b-container>
-      <div class="title">
+      <!-- <div class="title">
         <b-row>
           <b-col>
             <h3> Microtermes </h3>
+            <b-form-select
+              v-model="selected"
+              :options="options"
+            />
           </b-col>
           <b-col>
             <b-button
@@ -21,7 +25,7 @@
             Result: <i>{{ result }}</i>
           </b-col>
         </b-row>
-      </div>
+      </div> -->
 
       <div class="p__t--120">
 
@@ -105,6 +109,21 @@ export default {
       phase_3: null,
       phase_4: null,
       result: null,
+      selected: null,
+      options: [
+        {
+          id: 1,
+          label: 'Microtermes',
+          text: 'Microtermes',
+          value: 1,
+        },
+        {
+          id: 2,
+          label: 'Macrotermes',
+          text: 'Macrotermes',
+          value: 2,
+        },
+      ],
     };
   },
 

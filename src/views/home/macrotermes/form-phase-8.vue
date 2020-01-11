@@ -1,22 +1,23 @@
 <template>
   <div>
 
-    <div>
+    <div v-if="data === '2'">
       <hr>
-      <b-form-group label="Hyaline Tip's shape">
+      <b-form-group
+        label="Left mandible's form">
         <b-form-radio
           v-model="selected"
           name="some-radios"
           value="1"
           @change="change">
-          Elongated tip, pointed
+          Stout with hook tip, a lot of crenulation on inner margin
           <br>
           <b-img
             :height="150"
-            :src="require('@/assets/Macrotermes/mac_001.png')"
+            :src="require('@/assets/Macrotermes/mac_012.png')"
             alt="Fluid image"/>
           <br>
-          <!-- (Ahmad, 1965) -->
+          <!-- (Rathore and Bhattacharyya, 2004) -->
         </b-form-radio>
         <br>
         <br>
@@ -28,16 +29,14 @@
           name="some-radios"
           value="2"
           @change="change">
-
-          Short tip, tongue like - anteriorly rounded
-
+          Slender with small amount of serrated inner margin
           <br>
           <b-img
             :height="150"
-            :src="require('@/assets/Macrotermes/mac_002.png')"
+            :src="require('@/assets/Macrotermes/mac_013.png')"
             alt="Fluid image"/>
           <br>
-          <!-- (Ahmad, 1965; Maiti, 1983) -->
+          <!-- (Ahmad, 1965) -->
         </b-form-radio>
 
         <br>
@@ -45,27 +44,6 @@
         <slot name="2"/>
         <br>
 
-        <b-form-radio
-          v-model="selected"
-          name="some-radios"
-          value="3"
-          @change="change">
-
-          Short tip, trilobed pointy
-
-          <br>
-          <b-img
-            :height="150"
-            :src="require('@/assets/Macrotermes/mac_003.png')"
-            alt="Fluid image"/>
-          <br>
-          <!-- (Ahmad, 1965; Maiti, 1983) -->
-        </b-form-radio>
-
-        <br>
-        <br>
-        <slot name="3"/>
-        <br>
       </b-form-group>
       <hr>
     </div>
@@ -91,12 +69,12 @@ export default {
       if (newVal) {
         this.isFinished(newVal);
       } else {
-        this.$emit('phaseTwo', null);
+        this.$emit('phaseEight', null);
       }
     },
     data(newVal) {
-      if (newVal === '1') {
-        this.$emit('phaseTwo', null);
+      if (newVal === '1' || newVal === '3') {
+        this.$emit('phaseEight', null);
       }
     },
   },
@@ -105,8 +83,12 @@ export default {
       this.selected = newVal;
     },
 
-    isFinished() {
-      this.$emit('phaseTwo', this.selected);
+    isFinished(val) {
+      if (val === '1' || val === '2') {
+        this.$emit('phaseEight', { value: this.selected, result: val === '1' ? 'species A' : 'serrulatus' });
+      } else {
+        this.$emit('phaseEight', this.selected);
+      }
     },
   },
 

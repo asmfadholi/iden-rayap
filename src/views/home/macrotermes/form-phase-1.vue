@@ -3,12 +3,12 @@
     <hr>
     <b-row>
       <b-col>
-        <b-form-group label="Defining tooth near the tip of the left Mandible">
+        <b-form-group label="Head's Color">
           <b-form-radio
             v-model="selected"
             name="some-radios"
             value="1"
-            @change="change">Present
+            @change="change">Black
           </b-form-radio>
           <br>
           <br>
@@ -18,7 +18,7 @@
             v-model="selected"
             name="some-radios"
             value="2"
-            @change="change">Not Present, only denticle
+            @change="change">Brown or lighter
           </b-form-radio>
 
           <br>
@@ -64,7 +64,7 @@ export default {
 
     isFinished(val) {
       if (val === '1') {
-        this.$emit('phaseOne', { value: this.selected, result: 'Microtermes globicola ' });
+        this.$emit('phaseOne', { value: this.selected, result: 'carbonarius' });
       } else {
         this.$emit('phaseOne', this.selected);
       }
