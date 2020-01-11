@@ -9,6 +9,7 @@
               <b-form-select
                 v-model="selected"
                 :options="options"
+                placeholder="Select title here"
               />
             </b-col>
             <b-col>

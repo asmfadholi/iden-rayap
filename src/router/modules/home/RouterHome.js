@@ -6,6 +6,7 @@ import Macrotermes from '@/views/home/macrotermes/Macrotermes';
 export default [{
         path: '/',
         name: 'Exchange Currency',
+        redirect: '/new',
         component: Home,
         meta: {
             title: 'Home',
@@ -15,6 +16,7 @@ export default [{
         path: '/new',
         name: 'Serangga',
         component: MHome,
+        redirect: '/new/microtermes',
         meta: {
             title: 'Home',
         },
