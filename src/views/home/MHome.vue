@@ -46,13 +46,19 @@ export default {
           id: 1,
           label: 'Microtermes',
           text: 'Microtermes',
-          value: 1,
+          value: 'microtermes',
         },
         {
           id: 2,
           label: 'Macrotermes',
           text: 'Macrotermes',
-          value: 2,
+          value: 'macrotermes',
+        },
+        {
+          id: 3,
+          label: 'Odontotermes',
+          text: 'Odontotermes',
+          value: 'odontotermes',
         },
       ],
     };
@@ -63,11 +69,12 @@ export default {
 
   watch: {
     selected(newVal) {
-      if (newVal === 1) {
-        this.$router.replace('/new/microtermes');
-      } else {
-        this.$router.replace('/new/macrotermes');
-      }
+      this.$router.replace(`/new/${newVal}`);
+      // if (newVal === 1) {
+      //   this.$router.replace('/new/microtermes');
+      // } else {
+      //   this.$router.replace('/new/macrotermes');
+      // }
     },
   },
 
