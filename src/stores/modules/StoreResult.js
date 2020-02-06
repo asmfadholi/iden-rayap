@@ -23,6 +23,7 @@ const mutations = {
 
     setResultReset(state, payload) {
         state.result_state[payload] = !state.result_state[payload];
+        state.result_state.result = null;
     },
 };
 
