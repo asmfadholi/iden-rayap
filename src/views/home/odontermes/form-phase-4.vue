@@ -14,7 +14,7 @@
           <br>
           <b-img
             :height="150"
-            :src="require('@/assets/Macrotermes/mac_008.png')"
+            :src="require('@/assets/Odontotermes/O_004.png')"
             alt="Fluid image"/>
           <br>
           (Chhotani, 1997)
@@ -33,7 +33,7 @@
           <br>
           <b-img
             :height="150"
-            :src="require('@/assets/Macrotermes/mac_009.png')"
+            :src="require('@/assets/Odontotermes/O_005.png')"
             alt="Fluid image"/>
           <br>
           (Ahmad, 1965)
@@ -62,7 +62,7 @@
           <br>
           <b-img
             :height="150"
-            :src="require('@/assets/Microtermes/mic_006.png')"
+            :src="require('@/assets/Odontotermes/O_006.png')"
             alt="Fluid image"/>
           <br>
           (Ahmad, 1947)
@@ -85,7 +85,7 @@
           <br>
           <b-img
             :height="150"
-            :src="require('@/assets/Microtermes/mic_006.png')"
+            :src="require('@/assets/Odontotermes/O_007.png')"
             alt="Fluid image"/>
           <br>
           (Ahmad, 1965)
@@ -112,7 +112,7 @@
           <br>
           <b-img
             :height="150"
-            :src="require('@/assets/Microtermes/mic_006.png')"
+            :src="require('@/assets/Odontotermes/O_009.png')"
             alt="Fluid image"/>
           <br>
           (Tho, 1992)
@@ -135,7 +135,7 @@
           <br>
           <b-img
             :height="150"
-            :src="require('@/assets/Microtermes/mic_006.png')"
+            :src="require('@/assets/Odontotermes/O_008.png')"
             alt="Fluid image"/>
           <br>
           (Ahmad, 1965)
