@@ -215,7 +215,7 @@ export default {
     isFinished(val) {
       if (val === '1' || val === '2') {
         this.$emit('phaseSeven', { value: this.selected, result: val === '1' ? 'Odontotermes karnyi ' : 'Odontotermes grandiceps' });
-      } if (val === '3') {
+      } else if (val === '3') {
         this.$emit('phaseSeven', { value: this.selected, result: 'Odontotermes celebensis' });
       } else {
         this.$emit('phaseSeven', this.selected);
