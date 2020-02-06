@@ -3,6 +3,7 @@ import MHome from '@/views/home/MHome';
 import Microtermes from '@/views/home/microtermes/Microtermes';
 import Macrotermes from '@/views/home/macrotermes/Macrotermes';
 import Odontermes from '@/views/home/odontermes/Odontermes';
+import Pericapritermes from '@/views/home/pericapritermes/Pericapritermes';
 
 export default [{
         path: '/',
@@ -41,6 +42,14 @@ export default [{
                 path: 'odontotermes',
                 name: 'Serangga',
                 component: Odontermes,
+                meta: {
+                    title: 'Home',
+                },
+            },
+            {
+                path: 'pericapritermes',
+                name: 'Serangga',
+                component: Pericapritermes,
                 meta: {
                     title: 'Home',
                 },

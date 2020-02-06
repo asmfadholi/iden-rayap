@@ -60,6 +60,12 @@ export default {
           text: 'Odontotermes',
           value: 'odontotermes',
         },
+        {
+          id: 3,
+          label: 'Pericapritermes',
+          text: 'Pericapritermes',
+          value: 'pericapritermes',
+        },
       ],
     };
   },
