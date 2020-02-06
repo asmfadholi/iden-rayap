@@ -17,7 +17,7 @@
           <br>
           <b-img
             :height="150"
-            :src="require('@/assets/Macrotermes/mac_001.png')"
+            :src="require('@/assets/Odontotermes/O_001.png')"
             alt="Fluid image"/>
           <br>
           (Ahmad, 1965)
@@ -42,7 +42,7 @@
           <br>
           <b-img
             :height="150"
-            :src="require('@/assets/Macrotermes/mac_002.png')"
+            :src="require('@/assets/Odontotermes/O_002.png')"
             alt="Fluid image"/>
           <br>
           <!-- (Ahmad, 1965; Maiti, 1983) -->

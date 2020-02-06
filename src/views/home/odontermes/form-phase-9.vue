@@ -4,7 +4,7 @@
     <div v-if="data === '4'">
       <hr>
       <b-form-group
-        label="Antenna articles ">
+        label="Head's shape (mm)">
         <!-- <i
           :class="selected === '1' ? 'fa-minus' : 'fa-plus'"
           class="fa"
@@ -14,14 +14,14 @@
           name="some-radios"
           value="1"
           @change="change">
-          16 articles/segment
+          Subrectangular
           <br>
-          <!-- <b-img
+          <b-img
             :height="150"
-            :src="require('@/assets/Odontotermes/O_018.png')"
+            :src="require('@/assets/Odontotermes/O_026.png')"
             alt="Fluid image"/>
-          <br> -->
-          <!-- (Kemner, 1934) -->
+          <br>
+          (Ahmad, 1965)
         </b-form-radio>
         <br>
         <br>
@@ -37,14 +37,14 @@
           name="some-radios"
           value="2"
           @change="change">
-          17 articles/segment
+          Ovoid
           <br>
-          <!-- <b-img
+          <b-img
             :height="150"
-            :src="require('@/assets/Odontotermes/O_019.png')"
+            :src="require('@/assets/Odontotermes/O_027.png')"
             alt="Fluid image"/>
-          <br> -->
-          <!-- (Kemner, 1934) -->
+          <br>
+          (Amir, 1975)
         </b-form-radio>
 
         <br>
@@ -57,24 +57,24 @@
       <hr>
     </div>
 
-    <div v-else-if="data === '5'">
+    <div v-else-if="data === '6'">
       <hr>
       <b-form-group
-        label="Antenna articles ">
-        <i
-          :class="selected === '3' ? 'fa-minus' : 'fa-plus'"
+        label="Labrum's form">
+        <!-- <i
+          :class="selected === '1' ? 'fa-minus' : 'fa-plus'"
           class="fa"
-          @click="toggle('3')"/>
+          @click="toggle('1')"/> -->
         <b-form-radio
           v-model="selected"
           name="some-radios"
           value="3"
           @change="change">
-          Broadly rounded
+          Lancet (L>>W)
           <br>
           <b-img
             :height="150"
-            :src="require('@/assets/Odontotermes/O_018-1.png')"
+            :src="require('@/assets/Odontotermes/O_025-1.png')"
             alt="Fluid image"/>
           <br>
           (Kemner, 1934)
@@ -84,20 +84,20 @@
         <slot name="3"/>
         <br>
         <hr>
-        <i
+        <!-- <i
           :class="selected === '4' ? 'fa-minus' : 'fa-plus'"
           class="fa"
-          @click="toggle('4')"/>
+          @click="toggle('4')"/> -->
         <b-form-radio
           v-model="selected"
           name="some-radios"
           value="4"
           @change="change">
-          Narrowly rounded
+          Dome with small cupola ( L < W )
           <br>
           <b-img
             :height="150"
-            :src="require('@/assets/Odontotermes/O_019-1.png')"
+            :src="require('@/assets/Odontotermes/O_025-2.png')"
             alt="Fluid image"/>
           <br>
           (Kemner, 1934)
@@ -106,62 +106,6 @@
         <br>
         <br>
         <slot name="4"/>
-        <br>
-
-
-      </b-form-group>
-      <hr>
-    </div>
-
-    <div v-else-if="data === '6'">
-      <hr>
-      <b-form-group
-        label="Left mandible tooth's location">
-        <i
-          :class="selected === '5' ? 'fa-minus' : 'fa-plus'"
-          class="fa"
-          @click="toggle('5')"/>
-        <b-form-radio
-          v-model="selected"
-          name="some-radios"
-          value="5"
-          @change="change">
-          anterior of mandible's mid point
-          <br>
-          <b-img
-            :height="150"
-            :src="require('@/assets/Odontotermes/O_020.png')"
-            alt="Fluid image"/>
-          <br>
-          (Ahmad, 1965)
-        </b-form-radio>
-        <br>
-        <br>
-        <slot name="5"/>
-        <br>
-        <hr>
-        <i
-          :class="selected === '6' ? 'fa-minus' : 'fa-plus'"
-          class="fa"
-          @click="toggle('6')"/>
-        <b-form-radio
-          v-model="selected"
-          name="some-radios"
-          value="6"
-          @change="change">
-          Between mandible's basal third to mid point
-          <br>
-          <b-img
-            :height="150"
-            :src="require('@/assets/Odontotermes/O_021-1.png')"
-            alt="Fluid image"/>
-          <br>
-          (Kemner, 1934)
-        </b-form-radio>
-
-        <br>
-        <br>
-        <slot name="6"/>
         <br>
 
 
@@ -190,12 +134,12 @@ export default {
       if (newVal) {
         this.isFinished(newVal);
       } else {
-        this.$emit('phaseSeven', null);
+        this.$emit('phaseNine', null);
       }
     },
     data(newVal) {
-      if (newVal !== '4' || newVal !== '5' || newVal !== '6') {
-        this.$emit('phaseSeven', null);
+      if (newVal !== '4' || newVal !== '6') {
+        this.$emit('phaseNine', null);
       }
     },
   },
@@ -214,11 +158,11 @@ export default {
 
     isFinished(val) {
       if (val === '1' || val === '2') {
-        this.$emit('phaseSeven', { value: this.selected, result: val === '1' ? 'Odontotermes karnyi ' : 'Odontotermes grandiceps' });
-      } if (val === '3') {
-        this.$emit('phaseSeven', { value: this.selected, result: 'Odontotermes celebensis' });
+        this.$emit('phaseNine', { value: this.selected, result: val === '1' ? 'Odontotermes takensis' : 'Odontotermes minutus ' });
+      } else if (val === '3' || val === '5') {
+        this.$emit('phaseNine', { value: this.selected, result: val === '3' ? 'Odontotermes makassarensis' : 'Odontotermes boetonensis' });
       } else {
-        this.$emit('phaseSeven', this.selected);
+        this.$emit('phaseNine', this.selected);
       }
     },
   },

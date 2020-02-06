@@ -47,7 +47,16 @@
                                   <phaseEight
                                     :data="phase_7"
                                     class="m__l--25"
-                                    @phaseEight="phase($event, 8)"/>
+                                    @phaseEight="phase($event, 8)">
+                                    <div :slot="phase_8">
+
+                                      <phaseEight
+                                        :data="phase_8"
+                                        class="m__l--25"
+                                        @phaseNine="phase($event, 9)"/>
+
+                                    </div>
+                                  </phaseEight>
 
                                 </div>
                               </phaseSeven>
@@ -89,13 +98,25 @@
     <b>Reference</b>
     <br>
     <p>
+      Kemner, N. A. (1930). Fauna Sumatrensis (Bijdrage No. 66). Termitidae. Tijdschrift Voor Entomologie, 73(3–4), 298-324 + 24 fig.
+    </p>
+    <p>
+      Kemner, N. V. A. (1934). Systematische und biologische Studien über die Termiten Javas und Celebes. Kungliga Svenska Vetenskapsakademiens Handlingar (3), 13(4), 1-241 + 22 pls.
+    </p>
+    <p>
+      Ahmad, M. (1947). New termites from the indo-malayan and papuan regions. American Museum Novitates, 1342, 1–7.
+    </p>
+    <p>
       Ahmad, M. (1965). Termites (Isoptera) of Thailand. Bulletin of the American Museum of Natural History (Vol. 131). New York: American Museum of Natural History.
     </p>
     <p>
-      Maiti, P. K. (1983). Termite fauna (Isoptera) of West Bengal , India, Their Recognition, Biology, and Ecology. (Z. S. of I. The Director, Ed.), Occasional Paper No 42. Calcutta: Zoological Survey of India.
+      Amir, M. (1975). An Additional Species of Odontotermes Holmgren from Lampung, Sumatera (Isoptera: Termitidae). Treubia, 28(4), 143–151.
     </p>
     <p>
-      Rathore, N. S., & Bhattacharyya, A. K. (2004). Termite (Insecta : Isoptera) Fauna of Gujarat and Rajasthan - Present State of Knowledge. (Z. S. of I. The Director, Ed.), Occasional Paper No 223. Calcutta: Zoological Survey of India.
+      Chhotani, O. B. (1997). Fauna of India, Isoptera (Termites) Vol II. In D. the Zoological Survey of India (Ed.), The Fauna of India and The Adjacent Countries (pp. xx + 820). Zoological Survey of India.
+    </p>
+    <p>
+      Tho, Y. P. (1992). Termites of Peninsular Malaysia. (L. G. Kirton, Ed.). Kepong: Forest Research Institute Malaysia.
     </p>
 
   </b-container>
@@ -111,6 +132,8 @@ import phaseFive from './form-phase-5';
 import phaseSix from './form-phase-6';
 import phaseSeven from './form-phase-7';
 import phaseEight from './form-phase-8';
+import phaseNine from './form-phase-9';
+
 
 
 export default {
@@ -123,6 +146,7 @@ export default {
     phaseSix,
     phaseSeven,
     phaseEight,
+    phaseNine,
   },
   data() {
     return {
@@ -134,6 +158,7 @@ export default {
       phase_6: null,
       phase_7: null,
       phase_8: null,
+      phase_9: null,
       result: null,
     };
   },
@@ -157,7 +182,7 @@ export default {
 
   methods: {
     resetData() {
-      for (let i = 1; i <= 8; i += 1) {
+      for (let i = 1; i <= 9; i += 1) {
         this[`phase_${i}`] = null;
       }
       this.result = null;
@@ -167,7 +192,7 @@ export default {
     },
     checkResult() {
       let number = null;
-      for (let i = 1; i <= 8; i += 1) {
+      for (let i = 1; i <= 9; i += 1) {
         if (this[`phase_${i}`]) {
           if (typeof this[`phase_${i}`] === 'object') {
             if (number === null) {
@@ -176,7 +201,7 @@ export default {
           }
         }
       }
-      for (let i = 8; i >= 1; i -= 1) {
+      for (let i = 9; i >= 1; i -= 1) {
         if (this[`phase_${i}`]) {
           if (typeof this[`phase_${i}`] === 'object') {
             if (i > number) {
