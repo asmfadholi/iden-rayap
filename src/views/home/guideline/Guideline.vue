@@ -136,7 +136,7 @@
                 TU - The total length of the mandible
                 <br>
                 <br>
-                Roonwal and Chhotani, 1989 - in Sornuwat, 2004)
+                (Roonwal and Chhotani, 1989 - in Sornuwat, 2004)
               </div>
             </div>
 
