@@ -106,7 +106,10 @@ export default {
   },
   methods: {
     change(newVal) {
-      this.selected = newVal;
+      this.selected = ''
+      setTimeout(() => {
+        this.selected = newVal;
+      }, 100)
     },
 
     toggle(data) {

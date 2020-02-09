@@ -237,7 +237,7 @@
           value="10"
           @change="change">
           < 1.35
-          | + M = 2.3 - 3.7
+          | + M = 2.3 - 4.0
 
 
           <!-- <br>
@@ -289,7 +289,10 @@ export default {
   },
   methods: {
     change(newVal) {
-      this.selected = newVal;
+      this.selected = ''
+      setTimeout(() => {
+        this.selected = newVal;
+      }, 100)
     },
 
     toggle(data) {

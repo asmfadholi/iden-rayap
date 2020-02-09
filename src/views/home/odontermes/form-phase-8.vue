@@ -60,7 +60,7 @@
     <div v-else-if="data === '5'">
       <hr>
       <b-form-group
-        label="Labrum's tip extension compared to left mandible tooth position">
+        label="Head's length (mm)">
         <!-- <i
           :class="selected === '1' ? 'fa-minus' : 'fa-plus'"
           class="fa"
@@ -201,7 +201,10 @@ export default {
   },
   methods: {
     change(newVal) {
-      this.selected = newVal;
+      this.selected = ''
+      setTimeout(() => {
+        this.selected = newVal;
+      }, 100)
     },
 
     toggle(data) {

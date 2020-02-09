@@ -118,7 +118,10 @@ export default {
   },
   methods: {
     change(newVal) {
-      this.selected = newVal;
+      this.selected = ''
+      setTimeout(() => {
+        this.selected = newVal;
+      }, 100)
     },
 
     toggle(data) {
@@ -131,7 +134,7 @@ export default {
 
     isFinished(val) {
       if (val === '1' || val === '2') {
-        this.$emit('phaseFour', { value: this.selected, result: val === '1' ? 'Macrotermes azarelli' : 'Macrotermes barneyi' });
+        this.$emit('phaseFour', { value: this.selected, result: val === '1' ? 'Macrotermes azarelli/gilvus' : 'Macrotermes barneyi' });
       } else {
         this.$emit('phaseFour', this.selected);
       }

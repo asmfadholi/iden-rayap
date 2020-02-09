@@ -77,7 +77,15 @@ export default {
 
   methods: {
     change(newVal) {
-      this.selected = newVal;
+      this.selected = ''
+      setTimeout(() => {
+        this.selected = newVal;
+      }, 100)
+      // this.$emit('phaseOne', newVal);
+    },
+
+    reset() {
+      this.selected = ''
     },
 
     toggle(data) {

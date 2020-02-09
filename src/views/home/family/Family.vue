@@ -5,9 +5,11 @@
       <br>
       <h3 class="m__t--130"> Family </h3>
       <phaseOne
+        ref="phase_1"
         @phaseOne="phase($event, 1)">
         <div :slot="phase_1">
           <phaseTwo
+            ref="phase_2"
             :data="phase_1"
             class="m__l--25"
             @phaseTwo="phase($event, 2)">
@@ -183,6 +185,9 @@ export default {
     },
     phase(newVal, number) {
       this[`phase_${number}`] = newVal;
+      if (this[`phase_${number+1}`]) {
+        this[`phase_${number+1}`] = null;
+      }
     },
     checkResult() {
       let number = null;

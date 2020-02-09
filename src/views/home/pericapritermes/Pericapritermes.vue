@@ -179,6 +179,9 @@ export default {
     },
     phase(newVal, number) {
       this[`phase_${number}`] = newVal;
+      if (this[`phase_${number+1}`]) {
+        this[`phase_${number+1}`] = null;
+      }
     },
     checkResult() {
       let number = null;

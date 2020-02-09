@@ -51,6 +51,12 @@ export default {
           value: 'guideline',
         },
         {
+          id: 4,
+          label: 'Family',
+          text: 'Family',
+          value: 'family',
+        },
+        {
           id: 1,
           label: 'Microtermes',
           text: 'Microtermes',
@@ -73,12 +79,6 @@ export default {
           label: 'Pericapritermes',
           text: 'Pericapritermes',
           value: 'pericapritermes',
-        },
-        {
-          id: 4,
-          label: 'Family',
-          text: 'Family',
-          value: 'family',
         },
       ],
     };

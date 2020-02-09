@@ -12,7 +12,7 @@
             :options="options_1">
             <div slot="name" slot-scope="props">
               <div v-if="props.row.name === 1">
-                General features of soldier and dorsal view of total body and measurement of Bifiditermes beesoni (Gardner)
+                General features of soldier and dorsal view of total body and measurement of <i>Bifiditermes beesoni</i> (Gardner)
                 <br>
                 a) Total body-length (line AA’)
                 <br>
@@ -27,17 +27,17 @@
                 <br>
                 Head and pronotum of:
                 <br>
-                a. Macrotermes khajuriai (Roonwal & Chhotani);
+                a. <i>Macrotermes khajuriai</i> (Roonwal & Chhotani);
                 <br>
-                b. Odontotermes lokanandi (Chatterjee & Thakur);
+                b. <i>Odontotermes lokanandi</i> (Chatterjee & Thakur);
                 <br>
-                c. Odontotermes distans (Holmgren & Holmgren);
+                c. <i>Odontotermes distans</i> (Holmgren & Holmgren);
                 <br>
-                d. Hypotermes xenotermitis (Wasmann);
+                d. <i>Hypotermes xenotermitis</i> (Wasmann);
                 <br>
-                e. Microtermes pakistanicus* (Ahmad);
+                e. <i>Microtermes pakistanicus*</i> (Ahmad);
                 <br>
-                f. Microtermes obesi (Holmgren)
+                f. <i>Microtermes obesi</i> (Holmgren)
                 <br>
 
                 <br>
@@ -89,15 +89,15 @@
               <div v-else-if="props.row.name === 2">
                 Pronotum, Mesonotum, and Metanotum dimension
                 <br>
-                1. Pericapritermes nitobei
+                1. <i>Pericapritermes nitobei</i>
                 <br>
-                2. Microtermes pakistanicus
+                2. <i>Microtermes pakistanicus</i>
                 <br>
-                3. Odontotermes oblongatus
+                3. <i>Odontotermes oblongatus</i>
                 <br>
-                4. Macrotermes gilvus - major soldier
+                4. <i>Macrotermes gilvus</i> - major soldier
                 <br>
-                5. Macrotermes chaiglomi - major soldier
+                5. <i>Macrotermes chaiglomi</i> - major soldier
                 <br>
                 <br>
                 Legend:
@@ -118,9 +118,9 @@
               <div v-else-if="props.row.name === 3">
                 Antenna's articles and dimension
                 <br>
-                1. Pericapritermes mohri - the entire antenna's length; 1A. Close-up drawing of the first six articles
+                1. <i>Pericapritermes mohri</i> - the entire antenna's length; 1A. Close-up drawing of the first six articles
                 <br>
-                2. Odontotermes bogoriensis - The entire antenna's length; 2A. Close-up drawing of the first six articles
+                2. <i>Odontotermes bogoriensis</i> - The entire antenna's length; 2A. Close-up drawing of the first six articles
                 <br>
                 <br>
                 (Kemner, 1934;  Roonwal and Chhotani, 1989 - with some alteration)

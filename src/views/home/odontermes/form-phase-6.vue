@@ -114,7 +114,9 @@
           name="some-radios"
           value="5"
           @change="change">
-          ">2 Ref: Head length range:"
+          >2
+          <br>
+          Ref: Head length range: 2.2 - 2.55
 
           <br>
           <!-- <b-img
@@ -138,7 +140,9 @@
           name="some-radios"
           value="6"
           @change="change">
-          "<=2 Ref: Head length range:"
+          <=2
+          <br />
+          Ref: Head length range: 1.3 - 2.1
 
           <br>
           <!-- <b-img
@@ -191,7 +195,10 @@ export default {
   },
   methods: {
     change(newVal) {
-      this.selected = newVal;
+      this.selected = ''
+      setTimeout(() => {
+        this.selected = newVal;
+      }, 100)
     },
 
     toggle(data) {
