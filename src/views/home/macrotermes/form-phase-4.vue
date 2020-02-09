@@ -4,13 +4,15 @@
     <div v-if="data === '5'">
       <hr>
       <b-form-group
-        label="Major soldier Head's length (mm)">
+        label="Head's length (mm)">
         <b-form-radio
           v-model="selected"
           name="some-radios"
           value="1"
           @change="change">
-          < 3.2
+          Major Soldier < 3.2
+          <br/>
+          Minor Soldier < 2.4
           <!-- <br>
           <b-img
             :height="150"
@@ -29,7 +31,9 @@
           name="some-radios"
           value="2"
           @change="change">
-          >= 3.2
+          Major Soldier >=3.2
+          <br/>
+          Minor Soldier >2.7
           <!-- <br>
           <b-img
             :height="150"
@@ -52,13 +56,19 @@
     <div v-if="data === '6'">
       <hr>
       <b-form-group
-        label="Major soldier Head's length (mm)">
+        label="Head's length (mm)">
+        <i
+          :class="selected === '3' ? 'fa-minus' : 'fa-plus'"
+          class="fa"
+          @click="toggle('3')"/>
         <b-form-radio
           v-model="selected"
           name="some-radios"
           value="3"
           @change="change">
-          < 3.2
+          Major Soldier >=3.2
+          <br/>
+          Minor Soldier >2.7
           <!-- <br>
           <b-img
             :height="150"
@@ -111,9 +121,17 @@ export default {
       this.selected = newVal;
     },
 
+    toggle(data) {
+      if (this.selected === data) {
+        this.selected = '';
+      } else {
+        this.selected = data;
+      }
+    },
+
     isFinished(val) {
       if (val === '1' || val === '2') {
-        this.$emit('phaseFour', { value: this.selected, result: val === '1' ? 'azarelli' : 'barneyi' });
+        this.$emit('phaseFour', { value: this.selected, result: val === '1' ? 'Macrotermes azarelli' : 'Macrotermes barneyi' });
       } else {
         this.$emit('phaseFour', this.selected);
       }

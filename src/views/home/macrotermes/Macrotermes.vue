@@ -47,7 +47,16 @@
                                   <phaseEight
                                     :data="phase_7"
                                     class="m__l--25"
-                                    @phaseEight="phase($event, 8)"/>
+                                    @phaseEight="phase($event, 8)">
+                                    <div :slot="phase_8">
+
+                                      <phaseNine
+                                        :data="phase_8"
+                                        class="m__l--25"
+                                        @phaseNine="phase($event, 9)"/>
+
+                                    </div>
+                                  </phaseEight>
 
                                 </div>
                               </phaseSeven>
@@ -111,6 +120,7 @@ import phaseFive from './form-phase-5';
 import phaseSix from './form-phase-6';
 import phaseSeven from './form-phase-7';
 import phaseEight from './form-phase-8';
+import phaseNine from './form-phase-9';
 
 
 export default {
@@ -123,6 +133,7 @@ export default {
     phaseSix,
     phaseSeven,
     phaseEight,
+    phaseNine,
   },
   data() {
     return {
@@ -134,6 +145,7 @@ export default {
       phase_6: null,
       phase_7: null,
       phase_8: null,
+      phase_9: null,
       result: null,
     };
   },
@@ -157,7 +169,7 @@ export default {
 
   methods: {
     resetData() {
-      for (let i = 1; i <= 8; i += 1) {
+      for (let i = 1; i <= 9; i += 1) {
         this[`phase_${i}`] = null;
       }
       this.result = null;
@@ -167,7 +179,7 @@ export default {
     },
     checkResult() {
       let number = null;
-      for (let i = 1; i <= 8; i += 1) {
+      for (let i = 1; i <= 9; i += 1) {
         if (this[`phase_${i}`]) {
           if (typeof this[`phase_${i}`] === 'object') {
             if (number === null) {
@@ -176,7 +188,7 @@ export default {
           }
         }
       }
-      for (let i = 8; i >= 1; i -= 1) {
+      for (let i = 9; i >= 1; i -= 1) {
         if (this[`phase_${i}`]) {
           if (typeof this[`phase_${i}`] === 'object') {
             if (i > number) {

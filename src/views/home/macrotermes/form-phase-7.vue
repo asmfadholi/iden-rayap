@@ -10,7 +10,9 @@
           name="some-radios"
           value="1"
           @change="change">
-          < 5.5
+          major soldier < 5.5
+          <br />
+          minor soldier < 3.0
           <!-- <br>
           <b-img
             :height="150"
@@ -24,12 +26,16 @@
         <slot name="1"/>
         <br>
         <hr>
+        <i
+          :class="selected === '2' ? 'fa-minus' : 'fa-plus'"
+          class="fa"
+          @click="toggle('2')"/>
         <b-form-radio
           v-model="selected"
           name="some-radios"
           value="2"
           @change="change">
-          <=6.8
+          5.7 < major soldier <=6.8
           <!-- <br>
           <b-img
             :height="150"
@@ -49,7 +55,9 @@
           name="some-radios"
           value="3"
           @change="change">
-          < 8
+          7 < major soldier < 8
+          <br />
+          2.7 < minor soldier < 3.1
           <!-- <br>
           <b-img
             :height="150"
@@ -104,9 +112,17 @@ export default {
       this.selected = newVal;
     },
 
+    toggle(data) {
+      if (this.selected === data) {
+        this.selected = '';
+      } else {
+        this.selected = data;
+      }
+    },
+
     isFinished(val) {
       if (val === '1' || val === '3') {
-        this.$emit('phaseSeven', { value: this.selected, result: val === '1' ? 'maesodensis' : 'annadalei' });
+        this.$emit('phaseSeven', { value: this.selected, result: val === '1' ? 'Macrotermes maesodensis' : 'Macrotermes annadalei' });
       } else {
         this.$emit('phaseSeven', this.selected);
       }

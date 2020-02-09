@@ -1,53 +1,48 @@
 <template>
   <div>
 
-    <div v-if="data === '3'">
+    <div v-if="data === '2'">
       <hr>
       <b-form-group
-        label="Antero-lateral lobe of pronotum's shape form ">
+        label="Mesonotum postero lateral shape">
         <b-form-radio
           v-model="selected"
           name="some-radios"
           value="1"
           @change="change">
-          very prominent with long setae
+          convex
           <br>
           <b-img
             :height="150"
-            :src="require('@/assets/Macrotermes/mac_008.png')"
+            :src="require('@/assets/Macrotermes/mac_014.png')"
             alt="Fluid image"/>
           <br>
-          (Tho, 1992)
+          (Weidner, 1962)
         </b-form-radio>
         <br>
         <br>
         <slot name="1"/>
         <br>
         <hr>
-        <i
-          :class="selected === '2' ? 'fa-minus' : 'fa-plus'"
-          class="fa"
-          @click="toggle('2')"/>
         <b-form-radio
           v-model="selected"
           name="some-radios"
           value="2"
           @change="change">
-          not so prominent
+          concave
           <br>
           <b-img
             :height="150"
-            :src="require('@/assets/Macrotermes/mac_009.png')"
+            :src="require('@/assets/Macrotermes/mac_015.png')"
             alt="Fluid image"/>
           <br>
-          (Ahmad, 1965)
+          (Weidner, 1962)
         </b-form-radio>
 
         <br>
         <br>
         <slot name="2"/>
         <br>
-
 
       </b-form-group>
       <hr>
@@ -74,12 +69,12 @@ export default {
       if (newVal) {
         this.isFinished(newVal);
       } else {
-        this.$emit('phaseFive', null);
+        this.$emit('phaseNine', null);
       }
     },
     data(newVal) {
-      if (newVal === '1' || newVal === '2') {
-        this.$emit('phaseFive', null);
+      if (newVal !== '2') {
+        this.$emit('phaseNine', null);
       }
     },
   },
@@ -97,10 +92,10 @@ export default {
     },
 
     isFinished(val) {
-      if (val === '1') {
-        this.$emit('phaseFive', { value: this.selected, result: 'Macrotermes ahmadi' });
+      if (val === '1' || val === '2') {
+        this.$emit('phaseNine', { value: this.selected, result: val === '1' ? 'Macrotermes serrulatus' : 'Macrotermes hopini' });
       } else {
-        this.$emit('phaseFive', this.selected);
+        this.$emit('phaseNine', this.selected);
       }
     },
   },

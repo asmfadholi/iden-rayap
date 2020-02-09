@@ -16,7 +16,7 @@
             :src="require('@/assets/Macrotermes/mac_004.png')"
             alt="Fluid image"/>
           <br>
-          <!-- (Rathore and Bhattacharyya, 2004) -->
+         (Ahmad, 1965)
         </b-form-radio>
         <br>
         <br>
@@ -35,7 +35,7 @@
             :src="require('@/assets/Macrotermes/mac_005.png')"
             alt="Fluid image"/>
           <br>
-          <!-- (Rathore and Bhattacharyya, 2004) -->
+          (Tho, 1992)
         </b-form-radio>
 
         <br>
@@ -62,7 +62,7 @@
             :src="require('@/assets/Macrotermes/mac_006.png')"
             alt="Fluid image"/>
           <br>
-          <!-- (Rathore and Bhattacharyya, 2004) -->
+          (Ahmad, 1965)
         </b-form-radio>
         <br>
         <br>
@@ -81,7 +81,7 @@
             :src="require('@/assets/Macrotermes/mac_007.png')"
             alt="Fluid image"/>
           <br>
-          <!-- (Rathore and Bhattacharyya, 2004) -->
+          (Ahmad, 1965)
         </b-form-radio>
 
         <br>
@@ -96,6 +96,10 @@
     <div v-else-if="data === '3'">
       <hr>
       <b-form-group label="Mesonotum lateral lobe shape">
+        <i
+          :class="selected === '5' ? 'fa-minus' : 'fa-plus'"
+          class="fa"
+          @click="toggle('5')"/>
         <b-form-radio
           v-model="selected"
           name="some-radios"
@@ -108,13 +112,17 @@
             :src="require('@/assets/Macrotermes/mac_006.png')"
             alt="Fluid image"/>
           <br>
-          <!-- (Rathore and Bhattacharyya, 2004) -->
+          (Ahmad, 1965)
         </b-form-radio>
         <br>
         <br>
         <slot name="5"/>
         <br>
         <hr>
+        <i
+          :class="selected === '6' ? 'fa-minus' : 'fa-plus'"
+          class="fa"
+          @click="toggle('6')"/>
         <b-form-radio
           v-model="selected"
           name="some-radios"
@@ -127,7 +135,7 @@
             :src="require('@/assets/Macrotermes/mac_007.png')"
             alt="Fluid image"/>
           <br>
-          <!-- (Rathore and Bhattacharyya, 2004) -->
+          (Ahmad, 1965)
         </b-form-radio>
 
         <br>
@@ -172,11 +180,19 @@ export default {
       this.selected = newVal;
     },
 
+    toggle(data) {
+      if (this.selected === data) {
+        this.selected = '';
+      } else {
+        this.selected = data;
+      }
+    },
+
     isFinished(val) {
       if (val === '1' || val === '2') {
-        this.$emit('phaseThree', { value: this.selected, result: val === '1' ? 'malaccensis' : 'species B' });
+        this.$emit('phaseThree', { value: this.selected, result: val === '1' ? 'Macrotermes malaccensis' : 'Macrotermes B sp.' });
       } else if (val === '3' || val === '4') {
-        this.$emit('phaseThree', { value: this.selected, result: val === '3' ? 'gilvus' : 'chaiglomi ' });
+        this.$emit('phaseThree', { value: this.selected, result: val === '3' ? 'Macrotermes gilvus' : 'Macrotermes chaiglomi' });
       } else {
         this.$emit('phaseThree', this.selected);
       }

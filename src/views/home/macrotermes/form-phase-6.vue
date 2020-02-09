@@ -18,13 +18,17 @@
             :src="require('@/assets/Macrotermes/mac_010.png')"
             alt="Fluid image"/>
           <br>
-          <!-- (Rathore and Bhattacharyya, 2004) -->
+          (Maiti, 1983)
         </b-form-radio>
         <br>
         <br>
         <slot name="1"/>
         <br>
         <hr>
+        <i
+          :class="selected === '2' ? 'fa-minus' : 'fa-plus'"
+          class="fa"
+          @click="toggle('2')"/>
         <b-form-radio
           v-model="selected"
           name="some-radios"
@@ -38,7 +42,7 @@
             :src="require('@/assets/Macrotermes/mac_011.png')"
             alt="Fluid image"/>
           <br>
-          <!-- (Ahmad, 1965) -->
+          (Ahmad, 1965)
         </b-form-radio>
 
         <br>
@@ -86,9 +90,17 @@ export default {
       this.selected = newVal;
     },
 
+    toggle(data) {
+      if (this.selected === data) {
+        this.selected = '';
+      } else {
+        this.selected = data;
+      }
+    },
+
     isFinished(val) {
       if (val === '1') {
-        this.$emit('phaseSix', { value: this.selected, result: 'estherae' });
+        this.$emit('phaseSix', { value: this.selected, result: 'Macrotermes estherae' });
       } else {
         this.$emit('phaseSix', this.selected);
       }

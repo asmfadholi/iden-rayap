@@ -4,32 +4,40 @@
     <div>
       <hr>
       <b-form-group label="Hyaline Tip's shape">
+        <i
+          :class="selected === '1' ? 'fa-minus' : 'fa-plus'"
+          class="fa"
+          @click="toggle('1')"/>
         <b-form-radio
           v-model="selected"
           name="some-radios"
           value="1"
           @change="change">
-          Elongated tip, pointed
+          Elongated tip, pointed - applicable to major and minor soldier
           <br>
           <b-img
             :height="150"
             :src="require('@/assets/Macrotermes/mac_001.png')"
             alt="Fluid image"/>
           <br>
-          <!-- (Ahmad, 1965) -->
+          (Ahmad, 1965)
         </b-form-radio>
         <br>
         <br>
         <slot name="1"/>
         <br>
         <hr>
+        <i
+          :class="selected === '2' ? 'fa-minus' : 'fa-plus'"
+          class="fa"
+          @click="toggle('2')"/>
         <b-form-radio
           v-model="selected"
           name="some-radios"
           value="2"
           @change="change">
 
-          Short tip, tongue like - anteriorly rounded
+          Short tip, tongue like - anteriorly rounded  - applicable to major and minor soldier
 
           <br>
           <b-img
@@ -37,21 +45,27 @@
             :src="require('@/assets/Macrotermes/mac_002.png')"
             alt="Fluid image"/>
           <br>
-          <!-- (Ahmad, 1965; Maiti, 1983) -->
+         (Ahmad, 1965)
         </b-form-radio>
 
         <br>
         <br>
         <slot name="2"/>
         <br>
-
+        <hr>
+        <i
+          :class="selected === '3' ? 'fa-minus' : 'fa-plus'"
+          class="fa"
+          @click="toggle('3')"/>
         <b-form-radio
           v-model="selected"
           name="some-radios"
           value="3"
           @change="change">
 
-          Short tip, trilobed pointy
+          Major soldier: Short tip, trilobed pointy
+          <br>
+          Minor soldier: Short tip, trilobed pointy with narrower labrum compared to common major soldier
 
           <br>
           <b-img
@@ -59,7 +73,7 @@
             :src="require('@/assets/Macrotermes/mac_003.png')"
             alt="Fluid image"/>
           <br>
-          <!-- (Ahmad, 1965; Maiti, 1983) -->
+          (Ahmad, 1965)
         </b-form-radio>
 
         <br>
@@ -94,6 +108,7 @@ export default {
         this.$emit('phaseTwo', null);
       }
     },
+
     data(newVal) {
       if (newVal === '1') {
         this.$emit('phaseTwo', null);
@@ -103,6 +118,14 @@ export default {
   methods: {
     change(newVal) {
       this.selected = newVal;
+    },
+
+    toggle(data) {
+      if (this.selected === data) {
+        this.selected = '';
+      } else {
+        this.selected = data;
+      }
     },
 
     isFinished() {
