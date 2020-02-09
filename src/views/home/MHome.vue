@@ -40,7 +40,7 @@ export default {
   name: 'Home',
   data() {
     return {
-      selected: 1,
+      selected: 'microtermes',
       options: [
         {
           id: 1,
