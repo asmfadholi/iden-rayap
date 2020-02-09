@@ -99,25 +99,25 @@
     <b>Reference</b>
     <br>
     <p>
-      Kemner, N. A. (1930). Fauna Sumatrensis (Bijdrage No. 66). Termitidae. Tijdschrift Voor Entomologie, 73(3–4), 298-324 + 24 fig.
+      Kemner, N. A. (1930). Fauna Sumatrensis (Bijdrage No. 66). Termitidae. <i>Tijdschrift Voor Entomologie, 73</i>(3–4), 298-324 + 24 fig.
     </p>
     <p>
-      Kemner, N. V. A. (1934). Systematische und biologische Studien über die Termiten Javas und Celebes. Kungliga Svenska Vetenskapsakademiens Handlingar (3), 13(4), 1-241 + 22 pls.
+      Kemner, N. V. A. (1934). Systematische und biologische Studien über die Termiten Javas und Celebes. <i>Kungliga Svenska Vetenskapsakademiens Handlingar (3)</i>, 13(4), 1-241 + 22 pls.
     </p>
     <p>
-      Ahmad, M. (1947). New termites from the indo-malayan and papuan regions. American Museum Novitates, 1342, 1–7.
+      Ahmad, M. (1947). New termites from the indo-malayan and papuan regions. <i>American Museum Novitates,</i> 1342, 1–7.
     </p>
     <p>
-      Ahmad, M. (1965). Termites (Isoptera) of Thailand. Bulletin of the American Museum of Natural History (Vol. 131). New York: American Museum of Natural History.
+      Ahmad, M. (1965). <i>Termites (Isoptera) of Thailand. Bulletin of the American Museum of Natural History </i>(Vol. 131). New York: American Museum of Natural History.
     </p>
     <p>
-      Amir, M. (1975). An Additional Species of Odontotermes Holmgren from Lampung, Sumatera (Isoptera: Termitidae). Treubia, 28(4), 143–151.
+      Amir, M. (1975). An Additional Species of Odontotermes Holmgren from Lampung, Sumatera (Isoptera: Termitidae). <i>Treubia, 28</i>(4), 143–151.
     </p>
     <p>
-      Chhotani, O. B. (1997). Fauna of India, Isoptera (Termites) Vol II. In D. the Zoological Survey of India (Ed.), The Fauna of India and The Adjacent Countries (pp. xx + 820). Zoological Survey of India.
+      Chhotani, O. B. (1997). Fauna of India, Isoptera (Termites) Vol II. In D. the Zoological Survey of India (Ed.), <i>The Fauna of India and The Adjacent Countries </i>(pp. xx + 820). Zoological Survey of India.
     </p>
     <p>
-      Tho, Y. P. (1992). Termites of Peninsular Malaysia. (L. G. Kirton, Ed.). Kepong: Forest Research Institute Malaysia.
+      Tho, Y. P. (1992). <i>Termites of Peninsular Malaysia. </i>(L. G. Kirton, Ed.). Kepong: Forest Research Institute Malaysia.
     </p>
 
   </b-container>

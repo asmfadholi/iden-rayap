@@ -153,6 +153,32 @@
       </div>
     </div>
 
+    <br>
+    <b>Reference</b>
+    <br>
+    <p>
+      Ahmad, M. (1965). <i> Termites (Isoptera) of Thailand. Bulletin of the American Museum of Natural History </i> (Vol. 131). New York: American Museum of Natural History.
+    </p>
+    <p>
+      Kemner, N. V. A. (1934). Systematische und biologische Studien über die Termiten Javas und Celebes.<i> Kungliga Svenska Vetenskapsakademiens Handlingar (3), 13</i>(4), 1-241 + 22 pls.
+    </p>
+    <p>
+      Roonwal, M. L., & Chhotani, O. B. (1989). Fauna of India, Isoptera (Termites) Vol I. <i>In The Fauna of India and The Adjacent Countries </i>(pp. 1–695). Zoological Survey of India.
+    </p>
+    <p>
+      Roonwall, M.L. (1969). Measurement of termites (Isoptera) for taxonomic purposes. <i>J. Zool. Soc. India 21</i>(1): 9-66.
+    </p>
+    <p>
+      Sornnuwat, Y., Vongkaluang, C., & Takematsu, Y. (2004). A Systematic Key to Termites of Thailand. <i>Kasetsart Journal, 38, </i>349–368.
+    </p>
+    <p>
+      Thakur, M. L. (1983). A review of the family Macrotermitidae (Isoptera) from the Oriental Region. <i>Oriental Insects, 17</i>(1), 35–77. https://doi.org/10.1080/00305316.1983.10433691
+    </p>
+    <p>
+      Tho, Y. P. (1992). <i>Termites of Peninsular Malaysia</i>. (L. G. Kirton, Ed.). Kepong: Forest Research Institute Malaysia.
+    </p>
+
+
 
   </b-container>
 </template>

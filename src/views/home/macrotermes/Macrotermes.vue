@@ -98,13 +98,13 @@
     <b>Reference</b>
     <br>
     <p>
-      Ahmad, M. (1965). Termites (Isoptera) of Thailand. Bulletin of the American Museum of Natural History (Vol. 131). New York: American Museum of Natural History.
+      Ahmad, M. (1965). <i>Termites (Isoptera) of Thailand. Bulletin of the American Museum of Natural History </i>(Vol. 131). New York: American Museum of Natural History.
     </p>
     <p>
-      Maiti, P. K. (1983). Termite fauna (Isoptera) of West Bengal , India, Their Recognition, Biology, and Ecology. (Z. S. of I. The Director, Ed.), Occasional Paper No 42. Calcutta: Zoological Survey of India.
+      Maiti, P. K. (1983). <i>Termite fauna (Isoptera) of West Bengal , India, Their Recognition, Biology, and Ecology</i>. (Z. S. of I. The Director, Ed.), <i>Occasional Paper No 42</i>. Calcutta: Zoological Survey of India.
     </p>
     <p>
-      Rathore, N. S., & Bhattacharyya, A. K. (2004). Termite (Insecta : Isoptera) Fauna of Gujarat and Rajasthan - Present State of Knowledge. (Z. S. of I. The Director, Ed.), Occasional Paper No 223. Calcutta: Zoological Survey of India.
+      Weidner, H. (1962). Die Macrotermes-Arten Burmas. <i>Anzeiger Fur Schadlingskunde, 35</i>(September 1962), 129–133.
     </p>
 
   </b-container>

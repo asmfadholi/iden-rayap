@@ -97,16 +97,16 @@
     <b>Reference</b>
     <br>
     <p>
-      Kemner, N. V. A. (1934). Systematische und biologische Studien über die Termiten Javas und Celebes. Kungliga Svenska Vetenskapsakademiens Handlingar (3), 13(4), 1-241 + 22 pls.
+      Kemner, N. V. A. (1934). Systematische und biologische Studien über die Termiten Javas und Celebes. <i>Kungliga Svenska Vetenskapsakademiens Handlingar (3), 13</i>(4), 1-241 + 22 pls.
     </p>
     <p>
-      Ahmad, M. (1965). Termites (Isoptera) of Thailand. Bulletin of the American Museum of Natural History (Vol. 131). New York: American Museum of Natural History.
+      Ahmad, M. (1965). <i>Termites (Isoptera) of Thailand. Bulletin of the American Museum of Natural History </i>(Vol. 131). New York: American Museum of Natural History.
     </p>
     <p>
-      Maiti, P. K. (1983). Termite fauna (Isoptera) of West Bengal , India, Their Recognition, Biology, and Ecology. (Z. S. of I. The Director, Ed.), Occasional Paper No 42. Calcutta: Zoological Survey of India.
+      Maiti, P. K. (1983). <i>Termite fauna (Isoptera) of West Bengal , India, Their Recognition, Biology, and Ecology. </i>(Z. S. of I. The Director, Ed.),<i> Occasional Paper No 42</i>. Calcutta: Zoological Survey of India.
     </p>
     <p>
-      Silvestri, F. (1922). Descriptions of Some Indo-Malayan Species of Capritermes (Termitidae). Record of The Zoological Survey of India, 24(4), 535–546.
+      Silvestri, F. (1922). Descriptions of Some Indo-Malayan Species of Capritermes (Termitidae). <i>Record of The Zoological Survey of India, 24</i>(4), 535–546.
     </p>
 
   </b-container>
