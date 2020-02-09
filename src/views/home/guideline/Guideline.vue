@@ -2,7 +2,7 @@
   <b-container>
     <div>
       <br>
-      <div class="m__t--130">
+      <div class="m__t--80">
         <h3> Measurement Guideline </h3>
         <div>
           <v-client-table
