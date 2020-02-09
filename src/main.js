@@ -8,6 +8,7 @@ import stores from './stores/index';
 import router from './router';
 import Vuelidate from 'vuelidate';
 import twinNum from 'vue-tween-number';
+import { ClientTable } from 'vue-tables-2';
 
 // axios global
 window.axios = require('axios');
@@ -15,6 +16,7 @@ window.axios = require('axios');
 Vue.use(VueExtendLayout);
 Vue.use(BootstrapVue);
 Vue.use(Vuelidate);
+Vue.use(ClientTable);
 
 Vue.component('vue-multiselect', Multiselect);
 Vue.component('tween-num', twinNum);
@@ -31,8 +33,8 @@ Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  store: stores,
-  ...layout,
+    el: '#app',
+    router,
+    store: stores,
+    ...layout,
 });

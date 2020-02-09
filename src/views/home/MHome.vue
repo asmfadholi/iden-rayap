@@ -13,17 +13,19 @@
               />
             </b-col>
             <b-col>
-              <b-button
-                variant="success"
-                @click="checkResult">Check
-              </b-button>
-              <b-button
-                variant="danger"
-                @click="resetData">Reset
-              </b-button>
-              <br>
-              <br>
-              Result: <i>{{ result_state.result }}</i>
+              <div v-if="selected !== 'guideline'">
+                <b-button
+                  variant="success"
+                  @click="checkResult">Check
+                </b-button>
+                <b-button
+                  variant="danger"
+                  @click="resetData">Reset
+                </b-button>
+                <br>
+                <br>
+                Result: <i>{{ result_state.result }}</i>
+              </div>
             </b-col>
           </b-row>
         </div>
@@ -40,8 +42,14 @@ export default {
   name: 'Home',
   data() {
     return {
-      selected: 'microtermes',
+      selected: 'guideline',
       options: [
+        {
+          id: 0,
+          label: 'Guideline',
+          text: 'Guideline',
+          value: 'guideline',
+        },
         {
           id: 1,
           label: 'Microtermes',
