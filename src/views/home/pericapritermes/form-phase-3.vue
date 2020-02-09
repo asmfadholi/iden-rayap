@@ -58,10 +58,10 @@
     <div v-else-if="data === '2'">
       <hr>
       <b-form-group label="Cephalic Ringes">
-        <i
+        <!-- <i
           :class="selected === '3' ? 'fa-minus' : 'fa-plus'"
           class="fa"
-          @click="toggle('3')"/>
+          @click="toggle('3')"/> -->
         <b-form-radio
           v-model="selected"
           name="some-radios"

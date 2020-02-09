@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <div v-if="data === '3'">
+    <div v-if="data === '2'">
       <hr>
       <b-form-group
         label="Left mandible tip ">
