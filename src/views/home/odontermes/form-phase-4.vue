@@ -234,7 +234,7 @@
         <b-form-radio
           v-model="selected"
           name="some-radios"
-          value="9"
+          value="10"
           @change="change">
           < 1.35
           | + M = 2.3 - 3.7

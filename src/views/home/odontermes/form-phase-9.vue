@@ -159,7 +159,7 @@ export default {
     isFinished(val) {
       if (val === '1' || val === '2') {
         this.$emit('phaseNine', { value: this.selected, result: val === '1' ? 'Odontotermes takensis' : 'Odontotermes minutus ' });
-      } else if (val === '3' || val === '5') {
+      } else if (val === '3' || val === '4') {
         this.$emit('phaseNine', { value: this.selected, result: val === '3' ? 'Odontotermes makassarensis' : 'Odontotermes boetonensis' });
       } else {
         this.$emit('phaseNine', this.selected);

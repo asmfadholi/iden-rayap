@@ -50,7 +50,7 @@
                                     @phaseEight="phase($event, 8)">
                                     <div :slot="phase_8">
 
-                                      <phaseEight
+                                      <phaseNine
                                         :data="phase_8"
                                         class="m__l--25"
                                         @phaseNine="phase($event, 9)"/>
