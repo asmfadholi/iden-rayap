@@ -66,6 +66,12 @@ export default {
           text: 'Pericapritermes',
           value: 'pericapritermes',
         },
+        {
+          id: 4,
+          label: 'Family',
+          text: 'Family',
+          value: 'family',
+        },
       ],
     };
   },

@@ -4,6 +4,7 @@ import Microtermes from '@/views/home/microtermes/Microtermes';
 import Macrotermes from '@/views/home/macrotermes/Macrotermes';
 import Odontermes from '@/views/home/odontermes/Odontermes';
 import Pericapritermes from '@/views/home/pericapritermes/Pericapritermes';
+import Family from '@/views/home/family/Family';
 
 export default [{
         path: '/',
@@ -50,6 +51,15 @@ export default [{
                 path: 'pericapritermes',
                 name: 'Serangga',
                 component: Pericapritermes,
+                meta: {
+                    title: 'Home',
+                },
+            },
+
+            {
+                path: 'family',
+                name: 'Serangga',
+                component: Family,
                 meta: {
                     title: 'Home',
                 },
