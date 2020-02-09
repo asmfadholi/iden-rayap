@@ -23,6 +23,10 @@
         <slot name="1"/>
         <br>
         <hr>
+        <i
+          :class="selected === '2' ? 'fa-minus' : 'fa-plus'"
+          class="fa"
+          @click="toggle('2')"/>
         <b-form-radio
           v-model="selected"
           name="some-radios"
@@ -81,6 +85,14 @@ export default {
   methods: {
     change(newVal) {
       this.selected = newVal;
+    },
+
+    toggle(data) {
+      if (this.selected === data) {
+        this.selected = '';
+      } else {
+        this.selected = data;
+      }
     },
 
     isFinished(val) {

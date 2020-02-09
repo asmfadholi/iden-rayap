@@ -83,6 +83,14 @@ export default {
       this.selected = newVal;
     },
 
+    toggle(data) {
+      if (this.selected === data) {
+        this.selected = '';
+      } else {
+        this.selected = data;
+      }
+    },
+
     isFinished(val) {
       if (val === '1' || val === '2') {
         this.$emit('phaseFour', { value: this.selected, result: val === '1' ? 'Microtermes unicolor' : 'Microtermes obesi' });
