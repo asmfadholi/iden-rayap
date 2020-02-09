@@ -20,7 +20,7 @@ export default [{
         path: '/new',
         name: 'Serangga',
         component: MHome,
-        redirect: '/new/microtermes',
+        redirect: '/new/guideline',
         meta: {
             title: 'Home',
         },
