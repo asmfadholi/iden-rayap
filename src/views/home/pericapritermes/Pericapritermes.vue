@@ -1,10 +1,9 @@
 <template>
   <b-container>
-    <h3> Pericapritermes </h3>
     <div>
-
+      <br>
+      <h3 class="m__t--130"> Pericapritermes </h3>
       <phaseOne
-        class="m__t--100"
         @phaseOne="phase($event, 1)">
         <div :slot="phase_1">
           <phaseTwo
