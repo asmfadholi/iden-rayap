@@ -21,7 +21,7 @@
             :src="require('@/assets/Family/F_014.png')"
             alt="Fluid image"/>
           <br>
-          (Kemner, 1934)
+          (Ahmad, 1965)
         </b-form-radio>
         <br>
         <br>

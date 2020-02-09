@@ -70,7 +70,7 @@
           name="some-radios"
           value="3"
           @change="change">
-          Preset
+          Present
           <br>
           <b-img
             :height="150"
